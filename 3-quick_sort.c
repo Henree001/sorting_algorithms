@@ -8,26 +8,26 @@
  * @size:  the size of the array.
  * Return: the place of the pivot.
  */
-size_t partition(int array[], int start, size_t size)
+size_t partition(int array[], size_t start, size_t size)
 {
-    size_t pivot = array[size], j, temp;
+	size_t pivot = array[size], j, temp;
 
-    for(j = start; j <= size; j++)
-    {
-        if (array[j] <= pivot)
-        {
-            temp = array[start];
-            array[start] = array[j];
-            array[j] = temp;
-            start++;
-        }
+	for(j = start; j <= size; j++)
+	{
+		if (array[j] <= pivot)
+		{
+			temp = array[start];
+			array[start] = array[j];
+			array[j] = temp;
+			start++;
+		}
                 
-    }
+	}
     /*temp = array[start];
     array[start] = array[size];
     array[size] = temp;
     /*print_array(array, size);*/
-    return (start - 1);
+	return (start - 1);
 }
 /**
  * lomuto_sort - Implement the quicksort algorithm through recursion.
@@ -36,7 +36,7 @@ size_t partition(int array[], int start, size_t size)
  * @start: Beginning of array.
  * Description: Uses the Lomuto partition scheme.
  */
-void lomuto_sort(int *array, int start, size_t size)
+void lomuto_sort(int *array, size_t start, size_t size)
 {
 	int part;
 
@@ -59,8 +59,8 @@ void lomuto_sort(int *array, int start, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-    if (array == NULL || size < 2)
+	if (array == NULL || size < 2)
 		return;
     
-    lomuto_sort(array, 0, size - 1);
+	lomuto_sort(array, 0, size - 1);
 }

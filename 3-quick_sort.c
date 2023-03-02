@@ -27,7 +27,7 @@ size_t partition(int array[], size_t start, size_t size)
     /*temp = array[start];
     array[start] = array[size];
     array[size] = temp;
-    /*print_array(array, size);*/
+    print_array(array, size);*/
 	return (start - 1);
 }
 /**

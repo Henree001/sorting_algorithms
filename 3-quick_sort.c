@@ -10,7 +10,8 @@
  */
 size_t partition(int array[], size_t start, size_t size)
 {
-	size_t pivot = array[size], j, temp;
+	int pivot = array[size];
+	size_t j, temp;
 
 	for(j = start; j <= size; j++)
 	{
